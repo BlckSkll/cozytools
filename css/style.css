@@ -1,0 +1,88 @@
+:root{
+  --verde-musgo: #6B8E23;
+  --laranja-queimado: #D08050;
+  --bege-claro: #F5E4C3;
+  --marrom-amadeirado: #8B5A2B;
+}
+
+
+
+.body{
+    max-width: 100%;
+    height: 90%;
+}
+
+.links{
+    font-family: "Quicksand", sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    justify-items: center ;
+   
+}
+
+.titulo{
+    font-size: xx-large;
+    color: var(--verde-musgo);
+    font-family: "lora", serif;
+   
+}
+
+.relogio{
+    font-family: "lora", serif;
+    border-color: #8B5A2B;
+
+}
+
+.relogio img{
+    gap: 20px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.bototes img{
+width: 60px;
+height: 100px;
+gap: 10px;
+}
+
+.botoes button{
+
+   padding: 10;
+   cursor: pointer;
+   
+}
+
+
+.textoExplicativo{
+    font-family: "lora", serif;
+}
+
+.rodape{
+    justify-content: center;
+    background-color: var(--bege-claro);
+
+}
+
+.copyright{
+    font-family: "Quicksand", sans-serif;
+}
+.corEscura{
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    color: var(--marrom-amadeirado);
+}
+
+.corClara{    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    color: var(--verde-musgo);
+}
+
+
