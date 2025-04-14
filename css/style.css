@@ -3,6 +3,8 @@
   --laranja-queimado: #D08050;
   --bege-claro: #F5E4C3;
   --marrom-amadeirado: #8B5A2B;
+  --branco: #fff;
+
 }
 
 
@@ -32,32 +34,47 @@
 }
 
 .relogio{
-    font-family: "lora", serif;
-    border-color: #8B5A2B;
-
+    position: relative;
+    display: inline-block;
 }
 
 .relogio img{
-    gap: 20px;
+   display: block;
+   max-width: 100%;
+   height: auto;
+
+}
+
+.numeros-classe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -60%);
+    color: var(--branco);
+    font-size: 7rem;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .botoes {
     display: flex;
     justify-content: center;
-   
+    width: 4.5rem;
+    height: 3rem;
+    
+
 }
 
-.bototes img{
-width: 60px;
-height: 100px;
-gap: 10px;
+.botoes img{
+width: 3.75rem;
+height: 2.75rem;
+cursor: pointer;
+
 }
 
 .botoes button{
-
-   padding: 10;
-   cursor: pointer;
-   
+   background-color: transparent;
+   border: none;
+      
 }
 
 
