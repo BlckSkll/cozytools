@@ -7,11 +7,19 @@
 
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
-.body{
+body{
     max-width: 100%;
-    height: 90%;
+    height: auto;
 }
 
 .links{
@@ -33,36 +41,63 @@
    
 }
 
-.relogio{
+
+.relogio {
     position: relative;
     display: inline-block;
 }
 
-.relogio img{
-   display: block;
-   max-width: 100%;
-   height: auto;
-
+.relogio img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-.numeros-classe{
-    position: absolute;
-    top: 50%;
+/* visor sobreposto */
+.visor {
+    position: absolute; /* pra ficar por cima da imagem */
+    top: 45%; /* ajuste fino conforme seu relógio */
     left: 50%;
-    transform: translate(-55%, -60%);
-    color: var(--branco);
-    font-size: 7rem;
-    font-family: "JetBrains Mono", monospace;
+    transform: translate(-10%, -50%);
+    width: 100%;
+    text-align: center;
 }
 
-.botoes {
+/* centraliza o grupo de inputs */
+.grupo_inputs_classe {
     display: flex;
     justify-content: center;
-    width: 4.5rem;
-    height: 3rem;
-    
-
+    gap: 0.5rem;
+    width: 60px;
+    font-size: 2.5rem;
+    font-family: "JetBrains Mono", monospace;
+    background-color: transparent;
+    color: var(--branco);
+    text-align: center;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
 }
+
+/* inputs estilizados */
+.grupo_inputs_classe input {
+    width: 8rem;
+    font-size: 7rem;
+    font-family: "JetBrains Mono", monospace;
+    background-color: transparent;
+    color: var(--branco);
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+/* o span ":" */
+.grupo_inputs_classe span {
+    font-size: 7rem;
+    color: var(--branco);
+}
+
 
 .botoes img{
 width: 3.75rem;

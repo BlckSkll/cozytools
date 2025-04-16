@@ -26,9 +26,18 @@
            
             <header class="titulo"> timer </header>
 
-            <div class="relogio"><img src="assets/relogio.png" alt="relogio marrom estilo radio antigo">
-                <div class="numeros-classe" id="numeros-id">00:00 </div>
+            <div class="relogio">
+                <img src="assets/relogio.png" alt="Relógio marrom estilo rádio antigo">
+            
+                <div class="visor">
+                    <div class="grupo_inputs_classe">
+                        <input id="min_input" type="number" min="0" max="59" value="00">
+                        <span>:</span>
+                        <input id="seg_input" type="number" min="0" max="59" value="00">
+                    </div>
+                </div>
             </div>
+                    
 
             <div class="botoes" id="divBotoes">
                 <button id="botoes_iniciar" > <img src="assets/iniciar.png" alt="botão inicar">  </button>
