@@ -53,51 +53,80 @@ body{
     height: auto;
 }
 
-/* visor sobreposto */
-.visor {
+.picker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute; /* pra ficar por cima da imagem */
-    top: 45%; /* ajuste fino conforme seu relógio */
-    left: 50%;
+    top: 45%; 
+    left: 10%;
     transform: translate(-10%, -50%);
     width: 100%;
     text-align: center;
-}
+    gap: 10px;
+  }
 
-/* centraliza o grupo de inputs */
-.grupo_inputs_classe {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 60px;
-    font-size: 2.5rem;
-    font-family: "JetBrains Mono", monospace;
-    background-color: transparent;
-    color: var(--branco);
-    text-align: center;
+  .picker {
+    position: relative;
+    height: 80px; /* Altura de um item */
+    width: 190px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     border: none;
-    outline: none;
+    border-radius: 8px;
+    background: transparent;
+  }
+  
+  .picker-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    cursor: pointer;
-}
-
-/* inputs estilizados */
-.grupo_inputs_classe input {
-    width: 8rem;
-    font-size: 7rem;
     font-family: "JetBrains Mono", monospace;
-    background-color: transparent;
+  }
+  
+  .picker-list li {
+    height: 80px; 
+    margin-left: -30px;
+    line-height: 80px;
+    scroll-snap-align: center;
+    user-select: none;
+    font-size: 6.8rem; /* Bem visível */
     color: var(--branco);
-    border: none;
-    outline: none;
-    text-align: center;
+  }
+
+.separador {
+    height: 80px; 
+    margin-left: -30px;
+    line-height: 80px;
+    margin-bottom: 15px;
+    scroll-snap-align: center;
+    user-select: none;
+    font-size: 6.8rem; /* Bem visível */
+    color: var(--branco); 
+}
+  
+ 
+.picker::before,
+.picker::after {
+  content: "";
+  position: absolute;
+  left: -60px; /* puxa um pouco para a esquerda */
+  width: 110%; /* deixa passar um pouco além da borda */
+  height: 2px;
+  background: var(--branco);
+  pointer-events: none;
 }
 
-/* o span ":" */
-.grupo_inputs_classe span {
-    font-size: 7rem;
-    color: var(--branco);
+.picker::before {
+  top: 0;
 }
 
+.picker::after {
+  bottom: 0;
+}
 
 .botoes img{
 width: 3.75rem;

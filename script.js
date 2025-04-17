@@ -1,53 +1,74 @@
-// Inputs
-let minInput = document.getElementById("min_input");
-let segInput = document.getElementById("seg_input");
+const botaoIniciar = document.getElementById('botoes_iniciar');
+const botaoPausar = document.getElementById('botoes_pausar');
+const botaoReiniciar = document.getElementById('botoes_reiniciar');
 
-// Variáveis de controle
-let segundos = 0;
-let intervaloID = null;
-let ativo = false;
+const pickerMinutos = document.querySelector('.picker-list.minutos');
+const pickerSegundos = document.querySelector('.picker-list.segundos');
 
-// Atualiza o visor a cada segundo
-function atualizarVisor(){
-    let minutos = Math.floor(segundos / 60);
-    let restoSegundos = segundos % 60;
+let intervalo = null;
+let tempoRestante = 0;
 
-    minInput.value = String(minutos).padStart(2, "0");
-    segInput.value = String(restoSegundos).padStart(2, "0");
+// Função para detectar o item central no scroll
+function getSelectedValue(pickerElement) {
+    const scrollTop = pickerElement.parentElement.scrollTop;
+    const itemHeight = 80; // mesma altura dos <li>
+    return Math.round(scrollTop / itemHeight);
+  }
+  
 
-    segundos++;
+// Scrolla os pickers para os valores corretos (visualmente)
+function scrollToValue(pickerElement, value) {
+  const itemHeight = 80; // altura fixa do <li>
+  pickerElement.scrollTop = value * itemHeight;
 }
 
-// Iniciar
-document.getElementById("botoes_iniciar").addEventListener("click", iniciar);
-function iniciar() {
-    if (!ativo) {
-        let minutos = parseInt(minInput.value) || 0;
-        let segundosInput = parseInt(segInput.value) || 0;
+function atualizarPickers(min, seg) {
+  scrollToValue(pickerMinutos.parentElement, min);
+  scrollToValue(pickerSegundos.parentElement, seg);
+}
 
-        segundos = minutos * 60 + segundosInput;
+// Inicia a contagem regressiva
+function iniciarContagem() {
+  if (intervalo) clearInterval(intervalo);
 
-        intervaloID = setInterval(atualizarVisor, 1000);
-        ativo = true;
+  const min = getSelectedValue(pickerMinutos);
+  const seg = getSelectedValue(pickerSegundos);
+
+  tempoRestante = min * 60 + seg;
+
+  intervalo = setInterval(() => {
+    if (tempoRestante <= 0) {
+      clearInterval(intervalo);
+      return;
     }
+
+    tempoRestante--;
+
+    const m = Math.floor(tempoRestante / 60);
+    const s = tempoRestante % 60;
+
+    atualizarPickers(m, s);
+  }, 1000);
 }
 
-// Pausar
-document.getElementById("botoes_pausar").addEventListener("click", pausar);
-function pausar(){
-    if (ativo) {
-        clearInterval(intervaloID);
-        ativo = false;
-    }
+// Pausa a contagem
+function pausarContagem() {
+  if (intervalo) {
+    clearInterval(intervalo);
+  }
 }
 
-// Reiniciar
-document.getElementById("botoes_reiniciar").addEventListener("click", reiniciar);
-function reiniciar() {
-    clearInterval(intervaloID);
-    segundos = 0;
-    ativo = false;
+// Reseta tudo
+function reiniciarContagem() {
+  if (intervalo) {
+    clearInterval(intervalo);
+  }
 
-    minInput.value = "00";
-    segInput.value = "00";
+  tempoRestante = 0;
+  atualizarPickers(0, 0);
 }
+
+// Conecta os botões às funções
+botaoIniciar.addEventListener('click', iniciarContagem);
+botaoPausar.addEventListener('click', pausarContagem);
+botaoReiniciar.addEventListener('click', reiniciarContagem);
