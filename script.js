@@ -8,17 +8,15 @@ const pickerSegundos = document.querySelector('.picker-list.segundos');
 let intervalo = null;
 let tempoRestante = 0;
 
-// Função para detectar o item central no scroll
-function getSelectedValue(pickerElement) {
-    const scrollTop = pickerElement.parentElement.scrollTop;
-    const itemHeight = 80; // mesma altura dos <li>
-    return Math.round(scrollTop / itemHeight);
-  }
-  
 
-// Scrolla os pickers para os valores corretos (visualmente)
+function getSelectedValue(pickerElement) {
+  const scrollTop = pickerElement.parentElement.scrollTop;
+  const itemHeight = 80;
+  return Math.round(scrollTop / itemHeight);
+}
+
 function scrollToValue(pickerElement, value) {
-  const itemHeight = 80; // altura fixa do <li>
+  const itemHeight = 80;
   pickerElement.scrollTop = value * itemHeight;
 }
 
@@ -27,7 +25,7 @@ function atualizarPickers(min, seg) {
   scrollToValue(pickerSegundos.parentElement, seg);
 }
 
-// Inicia a contagem regressiva
+
 function iniciarContagem() {
   if (intervalo) clearInterval(intervalo);
 
@@ -51,14 +49,12 @@ function iniciarContagem() {
   }, 1000);
 }
 
-// Pausa a contagem
 function pausarContagem() {
   if (intervalo) {
     clearInterval(intervalo);
   }
 }
 
-// Reseta tudo
 function reiniciarContagem() {
   if (intervalo) {
     clearInterval(intervalo);
@@ -68,7 +64,38 @@ function reiniciarContagem() {
   atualizarPickers(0, 0);
 }
 
-// Conecta os botões às funções
 botaoIniciar.addEventListener('click', iniciarContagem);
 botaoPausar.addEventListener('click', pausarContagem);
 botaoReiniciar.addEventListener('click', reiniciarContagem);
+
+
+function navegarComTeclado(event, pickerList) {
+  const items = pickerList.querySelectorAll('li');
+  const selectedIndex = Array.from(items).indexOf(document.activeElement);
+  
+  if (event.key === "ArrowDown") {
+    // Se estiver na última opção, vai para a primeira
+    if (selectedIndex === items.length - 1) {
+      items[0].focus();
+    } else {
+      items[selectedIndex + 1].focus();
+    }
+  } else if (event.key === "ArrowUp") {
+    // Se estiver na primeira opção, vai para a última
+    if (selectedIndex === 0) {
+      items[items.length - 1].focus();
+    } else {
+      items[selectedIndex - 1].focus();
+    }
+  } else if (event.key === "Enter") {
+    const selectedValue = items[selectedIndex].textContent;
+    console.log(`Valor selecionado: ${selectedValue}`);
+  }
+}
+
+// evento de teclado para os pickers
+pickerMinutos.addEventListener('keydown', (event) => navegarComTeclado(event, pickerMinutos));
+pickerSegundos.addEventListener('keydown', (event) => navegarComTeclado(event, pickerSegundos));
+
+// foca automaticamente no picker de minutos quando a página carregar
+pickerMinutos.querySelector('li').focus();

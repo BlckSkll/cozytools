@@ -1,10 +1,9 @@
-:root{
+:root {
   --verde-musgo: #6B8E23;
   --laranja-queimado: #D08050;
   --bege-claro: #F5E4C3;
   --marrom-amadeirado: #8B5A2B;
   --branco: #fff;
-
 }
 
 input::-webkit-outer-spin-button,
@@ -17,104 +16,139 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-body{
-    max-width: 100%;
-    height: auto;
+.links {
+  font-family: "Quicksand", sans-serif;
 }
 
-.links{
-    font-family: "Quicksand", sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr  ;
-    grid-template-rows:1fr 1fr 1fr 1fr;
-    justify-items: center ;
-   
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/plano-de-fundo-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
 }
 
-.titulo{
-    font-size: xx-large;
-    color: var(--verde-musgo);
-    font-family: "lora", serif;
-   
+#navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: right;
+  z-index: 999;
+  margin-right: 5rem;
+  font-weight: 900;
+  color: var(--verde-musgo);
 }
 
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.titulo {
+  font-size: x-large;
+  color: var(--verde-musgo);
+  font-family: "lora", serif;
+  font-weight: 800;
+}
 
 .relogio {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .relogio img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .picker-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute; /* pra ficar por cima da imagem */
-    top: 45%; 
-    left: 10%;
-    transform: translate(-10%, -50%);
-    width: 100%;
-    text-align: center;
-    gap: 10px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+  width: 100%;
+  text-align: center;
+  gap: 10px;
+}
 
-  .picker {
-    position: relative;
-    height: 80px; /* Altura de um item */
-    width: 190px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    border: none;
-    border-radius: 8px;
-    background: transparent;
-  }
-  
-  .picker-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: "JetBrains Mono", monospace;
-  }
-  
-  .picker-list li {
-    height: 80px; 
-    margin-left: -30px;
-    line-height: 80px;
-    scroll-snap-align: center;
-    user-select: none;
-    font-size: 6.8rem; /* Bem visível */
-    color: var(--branco);
-  }
+.picker {
+  position: relative;
+  height: 80px;
+  width: 190px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.picker-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.picker-list li {
+  height: 80px;
+  margin-left: -30px;
+  line-height: 80px;
+  scroll-snap-align: center;
+  user-select: none;
+  font-size: 6.8rem;
+  color: var(--branco);
+}
 
 .separador {
-    height: 80px; 
-    margin-left: -30px;
-    line-height: 80px;
-    margin-bottom: 15px;
-    scroll-snap-align: center;
-    user-select: none;
-    font-size: 6.8rem; /* Bem visível */
-    color: var(--branco); 
+  height: 80px;
+  margin-left: -30px;
+  line-height: 80px;
+  margin-bottom: 15px;
+  scroll-snap-align: center;
+  user-select: none;
+  font-size: 6.8rem;
+  color: var(--branco);
 }
-  
- 
+
 .picker::before,
 .picker::after {
   content: "";
   position: absolute;
-  left: -60px; /* puxa um pouco para a esquerda */
-  width: 110%; /* deixa passar um pouco além da borda */
+  left: -60px;
+  width: 110%;
   height: 2px;
   background: var(--branco);
   pointer-events: none;
@@ -128,42 +162,77 @@ body{
   bottom: 0;
 }
 
-.botoes img{
-width: 3.75rem;
-height: 2.75rem;
-cursor: pointer;
-
+.botoes img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: block;
 }
 
-.botoes button{
-   background-color: transparent;
-   border: none;
-      
+.botoes button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 
-
-.textoExplicativo{
-    font-family: "lora", serif;
+.botoes button:hover {
+  background-color: var(--branco);
 }
 
-.rodape{
-    justify-content: center;
-    background-color: var(--bege-claro);
-
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
 }
 
-.copyright{
-    font-family: "Quicksand", sans-serif;
-}
-.corEscura{
-    font-family: "JetBrains Mono", monospace;
-    font-weight: 100;
-    color: var(--marrom-amadeirado);
+.textoExplicativo {
+  font-family: "Quicksand", sans-serif;
+  text-align: right;
 }
 
-.corClara{    font-family: "JetBrains Mono", monospace;
-    font-weight: 100;
-    color: var(--verde-musgo);
+.destaque {
+  font-weight: bold;
+  color: var(--verde-musgo);
+  font-family: "Quicksand", sans-serif;
 }
 
+.rodape {
+  border-top: 1px solid var(--verde-musgo);
+  width: 70%;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transform: translateX(18%);
+  z-index: 10;
+}
 
+.copyright {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+.corEscura {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 900;
+  color: var(--marrom-amadeirado);
+}
+
+.corClara {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 900;
+  color: var(--verde-musgo);
+}
