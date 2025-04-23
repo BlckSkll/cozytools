@@ -1,3 +1,10 @@
+
+/* ajustes
+--espaçamento superior da navbar
+-- o timer e a imagem devem ter tamanho dinamico
+--quando a tela fica bem menor a posição do rodapé e navbar sobrepoe a imagem
+
+*/
 :root {
   --verde-musgo: #6B8E23;
   --laranja-queimado: #D08050;
@@ -199,7 +206,7 @@ body::before {
 
 .textoExplicativo {
   font-family: "Quicksand", sans-serif;
-  text-align: right;
+  text-align: left;
 }
 
 .destaque {

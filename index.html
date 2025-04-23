@@ -1,203 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>cozy tools</title>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Tools</title>
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/timer/timer.css"
+</head>
+<body>
 
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    </head>
+  <header id="navBar">
+    <nav>
+      <a href="index.html">home</a> |
+      <a href="/timer/timer.html">timer</a> |
+      <a href="/cronometro/cronometro.html">cronômetro</a> |
+      <a href="/imc/imc.html">IMC</a> |
+      <a href="/regra-de-3/regra-de-3.html">regra de 3</a> |
+      <a href="/pomodoro/pomodoro.html">pomodoro</a>
+    </nav>
+  </header>
 
-    <body>
-        <header  id="navBar" class="links"> 
-            <nav>
-            <a  class="links_timer" > home </a> | 
-            <a  class="links_timer" > timer </a> | 
-            <a class="links_relogio"> cronometro</a> |
-            <a class="links_imc"> IMC </a> |
-            <a class="links_regraDe3">regra de 3</a> |
-            <a  class="links_timer" > pomodoro </a> |
-        </nav>
-        </header>
+  <main class="home-container">
+    <h1>Cozy Tools</h1>
+    <section class="grid-ferramentas">
+      <a href="timer/timer.html" class="icone-ferramenta">🕒 Timer</a>
+      <a href="cronometro.html" class="icone-ferramenta">⏱️ Cronômetro</a>
+      <a href="imc.html" class="icone-ferramenta">⚖️ IMC</a>
+      <a href="regra-de-3.html" class="icone-ferramenta">📐 Regra de 3</a>
+      <a href="pomodoro.html" class="icone-ferramenta">🍅 Pomodoro</a>
+    </section>
+  </main>
 
-        <main class="container">
-           
-            <header class="titulo"> timer </header>
+  <footer class="rodape">
+    <p>Desenvolvido por regina_ribeiro</p>
+  </footer>
 
-            <div class="relogio">
-                <img src="assets/relogio.png" alt="relógio marrom estilo rádio antigo">
-              
-                <div class="visor">
-                  <div class="picker-container">
-                    <div class="picker">
-                      <ul class="picker-list minutos" tabindex="0">
-                        <li>00</li>
-                        <li>01</li>
-                        <li>02</li>
-                        <li>03</li>
-                        <li>04</li>
-                        <li>05</li>
-                        <li>06</li>
-                        <li>07</li>
-                        <li>08</li>
-                        <li>09</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>12</li>
-                        <li>13</li>
-                        <li>14</li>
-                        <li>15</li>
-                        <li>16</li>
-                        <li>17</li>
-                        <li>18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                        <li>32</li>
-                        <li>33</li>
-                        <li>34</li>
-                        <li>35</li>
-                        <li>36</li>
-                        <li>37</li>
-                        <li>38</li>
-                        <li>39</li>
-                        <li>40</li>
-                        <li>41</li>
-                        <li>42</li>
-                        <li>43</li>
-                        <li>44</li>
-                        <li>45</li>
-                        <li>46</li>
-                        <li>47</li>
-                        <li>48</li>
-                        <li>49</li>
-                        <li>50</li>
-                        <li>51</li>
-                        <li>52</li>
-                        <li>53</li>
-                        <li>54</li>
-                        <li>55</li>
-                        <li>56</li>
-                        <li>57</li>
-                        <li>58</li>
-                        <li>59</li>
-                      </ul>
-                    </div>
-              
-                    <span class="separador">:</span>
-        
-                    <div class="picker">
-                      <ul class="picker-list segundos" tabindex="0">
-                        <li>00</li>
-                        <li>01</li>
-                        <li>02</li>
-                        <li>03</li>
-                        <li>04</li>
-                        <li>05</li>
-                        <li>06</li>
-                        <li>07</li>
-                        <li>08</li>
-                        <li>09</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>12</li>
-                        <li>13</li>
-                        <li>14</li>
-                        <li>15</li>
-                        <li>16</li>
-                        <li>17</li>
-                        <li>18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                        <li>32</li>
-                        <li>33</li>
-                        <li>34</li>
-                        <li>35</li>
-                        <li>36</li>
-                        <li>37</li>
-                        <li>38</li>
-                        <li>39</li>
-                        <li>40</li>
-                        <li>41</li>
-                        <li>42</li>
-                        <li>43</li>
-                        <li>44</li>
-                        <li>45</li>
-                        <li>46</li>
-                        <li>47</li>
-                        <li>48</li>
-                        <li>49</li>
-                        <li>50</li>
-                        <li>51</li>
-                        <li>52</li>
-                        <li>53</li>
-                        <li>54</li>
-                        <li>55</li>
-                        <li>56</li>
-                        <li>57</li>
-                        <li>58</li>
-                        <li>59</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-                    
-
-            <div class="botoes" id="divBotoes">
-                <button id="botoes_iniciar" > <img src="assets/iniciar.png" alt="botão inicar">  </button>
-                <button id="botoes_pausar"><img src="assets/pausar.png" alt="botão pausar"> </button>
-                <button id="botoes_reiniciar"> <img src="assets/reiniciar.png" alt="botão reinicar"> </button>
-            </div>
-
-            <div class="textoExplicativo">
-              <h2>como usar:</h2>
-              <p>- escolha o tempo desejado usando o <span class="destaque">scroll</span> ou as <span class="destaque">setas</span> ⬆️⬇️.</p>
-              <p>- clique em <span class="destaque">iniciar</span> para começar a contagem.</p>
-              <p>- clique em <span class="destaque">pausar</span> para interromper.</p>
-              <p>- clique em <span class="destaque">reiniciar</span> para começar novamente.</p>
-            </div>
-            
-        </main>
-
-        <footer class="rodape">
-          <p class="copyright">desenvolvido por:</p>
-          <p>
-            <span class="corEscura">.</span>
-            <span class="corClara">regina_</span>
-            <span class="corEscura">ribeiro</span>
-            <span class="corClara">{}</span>
-          </p>
-        </footer>
-
-        <script src="script.js"></script>
-
-    </body>
-
+</body>
 </html>
