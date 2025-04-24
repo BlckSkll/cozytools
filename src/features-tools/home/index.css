@@ -1,0 +1,153 @@
+
+:root {
+    --verde-musgo: #6B8E23;
+    --laranja-queimado: #D08050;
+    --bege-claro: #F5E4C3;
+    --marrom-amadeirado: #8B5A2B;
+    --branco: #fff;
+    --fundo-claro:#fefcf9;
+    
+
+
+}
+
+/* index.css */
+
+body {
+    background-color: var(--bege-claro); 
+    color: var(--marrom-amadeirado);         
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Topo */
+  
+  .topo_classe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--branco); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .logo_cozy_tools img {
+    height: 80px;
+  }
+  
+  .topo_menu a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: var(--marrom-amadeirado);
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .topo_menu a:hover {
+    color: var(--verde-musgo); 
+  }
+  
+  /* Conteúdo principal */
+  
+  .container_home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .container_home h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 2.5rem;
+    color: var(--verde-musgo);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+   
+  }
+  
+  .grid_tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 960px;
+    padding: 2rem 1rem;
+  }
+  
+  /* Caixinha dos ícones */
+  .icone_tools {
+    background-color: var(--branco); /* definir como #fffaf4 no global */
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Efeito de hover bonito */
+  .icone_tools:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ícone visual */
+  .icone_tools img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  /* Texto */
+  .texto_tools {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--marrom-escuro); /* mesmo tom do menu */
+    text-decoration: none;
+  }
+  
+  /* Remove qualquer sublinhado residual */
+  .icone_tools span,
+  .icone_tools:link,
+  .icone_tools:visited {
+    text-decoration: none;
+  }
+  
+  
+  .texto_tools {
+    font-size: 1rem;
+    color: var(--verde-musgo);
+    font-weight: 500;
+  }
+  
+  /* Rodapé */
+  
+  .rodape {
+    text-align: center;
+    background-color: var(--branco);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--verde-musgo);
+    margin-top: auto;
+  }
+  
+  .corClara {
+    color: var(--verde-musgo);
+    font-weight: bold;
+  }
+  
+  .corEscura {
+    color: var(--marrom-amadeirado);
+  }
+  
