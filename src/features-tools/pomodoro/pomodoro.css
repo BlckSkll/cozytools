@@ -1,0 +1,173 @@
+body {
+    background-color: var(--fundo-claro);
+    color: var(--marrom-amadeirado);
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .topo_classe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--branco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo_cozy_tools img {
+    height: 80px;
+  }
+  
+  .topo_menu a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: var(--marrom-amadeirado);
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .topo_menu a:hover {
+    color: var(--verde-musgo);
+  }
+  .container_pomodoro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .container_pomodoro h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.9rem;
+    color: var(--marrom-amadeirado);
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+  }
+
+  .ciclos_imagens_tomates{
+    text-align: center;
+    height: 2rem;
+    background-color: var(--laranja-queimado);
+    color: var(--branco);
+    border: 4px solid var(--marrom-amadeirado);
+    border-radius: 6px;
+    box-shadow: inset 4px 4px 6px var(--laranja-queimado);
+    font-size: 1.5rem ;
+    font-family: 'vt323', monospace;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    
+  }
+
+  .ciclos_imagens_tomates img{
+    width: 30px;
+    height: auto;
+    display: block;
+    opacity: 0.3; .
+  }
+
+
+  .shape_pomodoro{
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    border: 4px solid var(--marrom-amadeirado);
+    border-radius: 6px;
+    box-shadow: 4px 4px 0px var(--laranja-queimado);
+    font-family: 'vt323', monospace;
+  }
+
+  .texto_tempos{
+    text-align: center;
+    height: 2rem;
+    background-color: var(--laranja-queimado);
+    color: var(--branco);
+    border: 4px solid var(--marrom-amadeirado);
+    border-radius: 6px;
+    box-shadow: inset 4px 4px 6px var(--laranja-queimado);
+    font-size: 2rem ;
+    font-family: 'vt323', monospace;
+
+  }
+
+  .visor_pomodoro{
+    text-align: center;
+    height: 7rem;
+    background-color: var(--laranja-queimado);
+    color: var(--branco);
+    border: 4px solid var(--marrom-amadeirado);
+    border-radius: 6px;
+    box-shadow: inset 4px 4px 6px var(--laranja-queimado);
+    font-size: 7rem ;
+    font-family: 'vt323', monospace;
+    font-weight: 300;
+
+  }
+
+  .botoes_pomodoro {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .botoes_pomodoro button {
+    flex: none;             
+    width: 6rem;            
+    padding: 8px 0;          
+    background-color: var(--laranja-queimado); 
+    color: var(--branco);
+    font-family: 'vt323', monospace;
+    font-size: 1.2rem;       
+    font-weight: 300;       
+    border: 3px solid var(--marrom-amadeirado);
+    border-radius: 6px;
+    box-shadow: 4px 4px 0 var(--marrom-amadeirado); 
+    cursor: pointer;
+    transition: 
+      background-color 0.3s ease, 
+      color 0.3s ease,
+      box-shadow 0.2s ease,
+      transform 0.1s ease;
+  }
+  
+  .botoes_pomodoro button:hover {
+    background-color: var(--fundo-claro);
+    color: var(--laranja-queimado);
+    box-shadow: inset 4px 4px 6px var(--laranja-queimado);
+    transform: translate(2px, 2px);
+  }
+
+
+
+   .rodape {
+    text-align: center;
+    background-color: var(--branco);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--verde-musgo);
+    margin-top: auto;
+  }
+  
+  .corClara {
+    color: var(--verde-musgo);
+    font-weight: bold;
+  }
+  
+  .corEscura {
+    color: var(--marrom-amadeirado);
+  }

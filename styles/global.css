@@ -4,64 +4,84 @@
   --bege-claro: #F5E4C3;
   --marrom-amadeirado: #8B5A2B;
   --branco: #fff;
+  --fundo-claro: #fefcf9;
+  --azul-claro: #70A0D0;
 }
 
+/* Remove setas de inputs numéricos */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* Fontes */
+body {
+  background-color: var(--fundo-claro);
+  color: var(--marrom-amadeirado);
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Tipografia e cores reutilizáveis */
+.corEscura {
+  color: var(--marrom-amadeirado);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 900;
+}
+.corClara {
+  color: var(--verde-musgo);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 900;
+}
+.destaque,
 .links,
 .textoExplicativo,
-.destaque,
 .copyright {
   font-family: "Quicksand", sans-serif;
 }
-
-.corEscura,
-.corClara {
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 900;
+.titulo-8bits {
+  font-family: "Press Start 2P", system-ui;
+  color: var(--azul-claro);
 }
 
-.corEscura {
+/* Topo */
+.topo_classe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--branco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo_cozy_tools img {
+  height: 80px;
+}
+.topo_menu a {
+  margin: 0 0.5rem;
+  text-decoration: none;
   color: var(--marrom-amadeirado);
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
-
-.corClara {
+.topo_menu a:hover {
   color: var(--verde-musgo);
 }
 
+/* Rodapé */
 .rodape {
-  border-top: 1px solid var(--verde-musgo);
-  width: 70%;
   text-align: center;
-  padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  transform: translateX(18%);
+  background-color: var(--branco);
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--verde-musgo);
+  margin-top: auto;
   z-index: 10;
-}
-
-.copyright {
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-}
-
-.corEscura {
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 900;
-  color: var(--marrom-amadeirado);
-}
-
-.corClara {
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 900;
-  color: var(--verde-musgo);
 }

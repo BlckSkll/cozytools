@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Tools</title>
+
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="regra-de-3.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="topo_classe" id="topo_id">
+    <div class="logo_cozy_tools">
+      <img src="/assets/logo-cozy-tools.png" alt="logo cozy tools, uma casa estilo ilustração 8bit ">
+    </div>
+
+    <nav class="topo_menu" >
+      <a href="/src/features-tools/home/index.html">home</a> |
+      <a href="/src/features-tools/timer/timer.html">timer</a> |
+      <a href="/src/features-tools/cronometro/cronometro.html">cronômetro</a> |
+      <a href="/src/features-tools/imc/imc.html">IMC</a> |
+      <a href="/src/features-tools/regra-de-3/regra-de-3.html">regra de 3</a> |
+      <a href="/src/features-tools/pomodoro/pomodoro.html">pomodoro</a>
+    </nav>
+    
+  </header>
+
+  <main class="container_regra_de_3">
+    <h1>calculadora de regra de 3</h1>
+  
+    <form class="calculadora_shape">
+    
+      <div class="campo_formulario">
+        <div class="campo_item">
+          <label class="texto_label" for="valorConhecido1">valor conhecido (1):</label>
+          <input type="text" id="valorConhecido1" placeholder="ex: 80" />
+        </div>
+        
+        <div class="campo_item">
+          <label class="texto_label" for="valorConhecido2">valor conhecido (2):</label>
+          <input type="text" id="valorConhecido2" placeholder="ex: 180" />
+        </div>
+      </div>
+  
+      <div class="campo_formulario">
+        <div class="campo_item">
+          <label class="texto_label" for="valorCalcular2">valor a calcular (2):</label>
+          <input type="text" id="valorCalcular2" placeholder="ex: 10" />
+        </div>
+    
+        <div class="campo_item">
+          <label class="texto_label" for="resultado">resultado:</label>
+          <input type="text" id="resultado" placeholder="resultado" readonly />
+        </div>
+      </div>
+    
+      <button id="botao_calcular" type="button">calcular</button>
+    </form>
+    
+    
+      
+
+    <div class="textoExplicativo">
+        <p class="destaque">⚠️ Importante:</p>
+        <p>• Digite todos os valores usando a <span class="destaque">mesma unidade</span> (ex: tudo em reais, tudo em gramas etc.).</p>
+        <p>• Preencha os 3 campos com atenção: o resultado aparece no último espaço. 😊</p>
+        <br />
+        <p class="destaque">Como usar:</p>
+        <p> - Ex: 2 pastéis custam R$ 10 </p>
+        <p> - Quero saber quanto custam 5 pastéis </p>
+        <p> - Digite: 2 → 10 → 5 → clique em <span class="destaque">calcular</span></p>
+        
+      </div>
+    
+  </main>
+  
+  
+
+  <footer class="rodape">
+    <p class="copyright">desenvolvido por:</p>
+    <p>
+      <span class="corEscura">.</span>
+      <span class="corClara">regina_</span>
+      <span class="corEscura">ribeiro</span>
+      <span class="corClara">{}</span>
+    </p>    
+  </footer>
+  <script src="regra-de-3.js"></script>
+</body>
+</html>
+
+
+

@@ -66,7 +66,7 @@ body {
     font-family: "Press Start 2P", system-ui;
     font-size: 2.5rem;
     color: var(--verde-musgo);
-    margin-top: 3rem;
+    margin-top: 15rem;
     margin-bottom: 2rem;
    
   }
@@ -77,7 +77,7 @@ body {
     gap: 2rem;
     width: 100%;
     max-width: 960px;
-    padding: 2rem 1rem;
+    padding: 2rem 10rem;
   }
   
   /* Caixinha dos ícones */
@@ -95,7 +95,7 @@ body {
     justify-content: center;
   }
   
-  /* Efeito de hover bonito */
+  /* Efeito de hover */
   .icone_tools:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -113,8 +113,9 @@ body {
   .texto_tools {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--marrom-escuro); /* mesmo tom do menu */
+    color: var(--marrom-amadeirado);
     text-decoration: none;
+
   }
   
   /* Remove qualquer sublinhado residual */
@@ -125,11 +126,7 @@ body {
   }
   
   
-  .texto_tools {
-    font-size: 1rem;
-    color: var(--verde-musgo);
-    font-weight: 500;
-  }
+ 
   
   /* Rodapé */
   

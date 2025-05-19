@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Tools - cronômetro</title>
+
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="cronometro.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="topo_classe" id="topo_id">
+    <div class="logo_cozy_tools">
+      <img src="/assets/logo-cozy-tools.png" alt="logo cozy tools, uma casa estilo ilustração 8bit ">
+    </div>
+
+    <nav class="topo_menu" >
+      <a href="index.html">home</a> |
+      <a href="/src/features-tools/timer/timer.html">timer</a> |
+      <a href="./src/features-tools/cronometro/cronometro.html">cronômetro</a> |
+      <a href="./src/features-tools/imc/imc.html">IMC</a> |
+      <a href="./src/features-tools/regra-de-3/regra-de-3.html">regra de 3</a> |
+      <a href="./src/features-tools/pomodoro/pomodoro.html">pomodoro</a>
+    </nav>
+    
+  </header>
+
+  <main class="container_cronometro">
+
+    <h1>cronômetro</h1>
+    
+    <div class="shape_cronometro">
+        <img src="/assets/moldura-timer.png" alt="relógio marrom estilo rádio antigo">
+        <diiv class="tempo_cronometro" id="visor_cronometro">00:00</diiv>
+    </div>
+
+  <div class="botoes" id="divBotoes">
+    <button id="botoes_iniciar" > iniciar </button>
+    <button id="botoes_pausar"> pausar </button>
+    <button id="botoes_reiniciar"> reiniciar </button>
+  </div>
+
+  <div class="como_usar_cronometro">
+    <p>como usar:</p>
+    <p> - navegue pela tela usando o scroll ou as setas ⬆︎⬇︎.</p>
+    <p> - clique em iniciar para começar a contagem.</p>
+    <p> - clique em pausar para interromper. </p>
+    <p> - clique em reiniciar para começar novamente.</p>
+  </div>
+  </main>
+
+  <footer class="rodape">
+    <p class="copyright">desenvolvido por:</p>
+    <p>
+      <span class="corEscura">.</span>
+      <span class="corClara">regina_</span>
+      <span class="corEscura">ribeiro</span>
+      <span class="corClara">{}</span>
+    </p>
+  </footer>
+
+  <script src="cronometro.js"></script>
+</body>
+</html>
