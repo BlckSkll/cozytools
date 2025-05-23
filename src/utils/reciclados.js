@@ -1,1 +1,0 @@
-// colocar aqui todos os blocos de codigo que podem ser usados por mais de uma ferramenta
