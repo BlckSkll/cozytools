@@ -1,13 +1,5 @@
-
-/* ajustes
---espaçamento superior da navbar
--- o timer e a imagem devem ter tamanho dinamico
---quando a tela fica bem menor a posição do rodapé e navbar sobrepoe a imagem
-
-*/
-
-
-body {
+.classe_body {
+  flex: 1;
   background-color: var(--fundo-claro);
   color: var(--marrom-amadeirado);
   font-family: "Quicksand", sans-serif;
@@ -15,33 +7,13 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  background-image: url("/assets/plano-de-fundo-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.topo_classe {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--branco);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo_cozy_tools img {
-  height: 80px;
-}
-
-.topo_menu a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: var(--marrom-amadeirado);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.topo_menu a:hover {
-  color: var(--verde-musgo);
-}
 .container {
   flex: 1;
   display: flex;
@@ -58,8 +30,6 @@ body {
   margin-top: 10rem;
   margin-bottom: 5rem;
 }
-
-
 
 .relogio {
   position: relative;
@@ -87,7 +57,7 @@ body {
 
 .picker {
   position: relative;
-  height: 80px;
+  height: 76px;
   width: 190px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -96,6 +66,8 @@ body {
   border: none;
   border-radius: 8px;
   background: transparent;
+  padding-top: 1px;
+ 
 }
 
 .picker-list {
@@ -112,7 +84,7 @@ body {
   line-height: 80px;
   scroll-snap-align: center;
   user-select: none;
-  font-size: 6.8rem;
+  font-size: 7rem;
   color: var(--branco);
 }
 
@@ -123,7 +95,7 @@ body {
   margin-bottom: 15px;
   scroll-snap-align: center;
   user-select: none;
-  font-size: 6.8rem;
+  font-size: 6rem;
   color: var(--branco);
 }
 
@@ -146,7 +118,6 @@ body {
   bottom: 0;
 }
 
-
 .botoes button {
   width: 100%;
   height: auto;
@@ -165,8 +136,6 @@ body {
   padding: 12px 20px;
   border-radius: 6px; 
   box-shadow: 4px 4px 0px var(--azul-claro);
-  
-  
 }
 
 .botoes button:hover {
@@ -188,15 +157,165 @@ body {
 
 }
 
-.textoExplicativo {
-  font-family: "Quicksand", sans-serif;
-  text-align: left;
+.destaque{
+  color: var(--bege-claro);
 }
 
-.destaque {
-  font-weight: bold;
-  color: var(--verde-musgo);
-  font-family: "Quicksand", sans-serif;
+.paragrafo{
+  color: var(--branco);
+  text-align: justify;
+  
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .container h1 {
+    font-size: 1.3rem;
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .relogio {
+    width: 90%;
+  }
+
+  .picker-container {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+  }
+
+  .picker {
+    height: 50px;
+    width: 100px;
+  }
+
+  .picker-list li,
+  .separador {
+    height: 50px;
+    line-height: 50px;
+    font-size: 3.5rem;
+    margin-left: -15px;
+  }
+
+  .picker::before,
+  .picker::after {
+    left: -30px;
+    width: 110%;
+    height: 1.5px;
+  }
+
+  .botoes {
+    max-width: 260px;
+    gap: 0.5rem;
+  }
+
+  .botoes button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-width: 3px;
+    box-shadow: 3px 3px 0px var(--azul-claro);
+  }
+
+  .textoExplicativo {
+    font-size: 0.9rem;
+  }
+  .rodape {
+    font-size: 0.75rem;
+    padding: 0.6rem 0.5rem;
+    text-align: center;
+  }
+
+  .linkedin-link {
+    font-size: 0.85rem;
+  }
+
+  .linkedin-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+    .container {
+    padding: 2rem 1rem;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+  }
+
+  .picker-container {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 8px;
+  }
+
+  .picker {
+    height: 65px;
+    width: 160px;
+  }
+
+  .picker-list li,
+  .separador {
+    height: 80px;
+    line-height: 80px;
+    font-size: 7rem;
+    margin-left: -22px;
+  }
+
+  .picker::before,
+  .picker::after {
+    left: -45px;
+    width: 110%;
+    height: 2px;
+  }
+
+  .botoes {
+    max-width: 300px;
+    gap: 0.75rem;
+  }
+
+  .botoes button {
+    font-size: 1.1rem;
+    padding: 10px 16px;
+    border-width: 4px;
+    box-shadow: 4px 4px 0px var(--azul-claro);
+  }
+
+  .textoExplicativo {
+    font-size: 1rem;
+  }
+
+  .rodape {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+    display: flex;
+  }
+
+  .rodape-assinatura {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .linkedin-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.3rem;
+  }
+}
 

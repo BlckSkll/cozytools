@@ -4,6 +4,7 @@ const btnIniciar = document.getElementById("botoes_iniciar");
 const btnPausar = document.getElementById("botoes_pausar");
 const btnReiniciar = document.getElementById("botoes_reiniciar");
 const tomates = document.querySelectorAll(".ciclos_imagens_tomates img");
+const audioAlerta = new Audio("/assets/sons/sfx-menu12.mp3");
 
 let tempo = 25 * 60; // tempo em segundos
 let tempoRestante = tempo;
@@ -71,10 +72,12 @@ function finalizarCiclo() {
   prontoProximo = true;
   atualizarEstadoTexto();
   visor.textContent = "00:00";
+  audioAlerta.play(); // Toca o áudio ao finalizar o ciclo
 }
 
 function pausarCiclo() {
   pausado = true;
+  audioAlerta.play(); // Toca o áudio ao pausar o ciclo
 }
 
 function reiniciarCiclo() {
@@ -83,6 +86,7 @@ function reiniciarCiclo() {
   atualizarVisor();
   pausado = false;
   prontoProximo = true;
+  audioAlerta.play(); // Toca o áudio ao reiniciar o ciclo
 }
 
 btnIniciar.addEventListener("click", () => {

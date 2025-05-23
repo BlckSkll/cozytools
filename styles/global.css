@@ -20,7 +20,7 @@ input[type="number"] {
 
 /* Fontes */
 body {
-  background-color: var(--fundo-claro);
+ 
   color: var(--marrom-amadeirado);
   font-family: "Quicksand", sans-serif;
   margin: 0;
@@ -84,4 +84,142 @@ body {
   border-top: 1px solid var(--verde-musgo);
   margin-top: auto;
   z-index: 10;
+  font-family: 'VT323', monospace;
+  color: var(--marrom-amadeirado);
+}
+
+.rodape-creditos {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.rodape-assinatura {
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
+.rodape-assinatura .ponto {
+  color: var(--verde-musgo);
+  font-weight: bold;
+}
+
+.rodape-assinatura .nome-um {
+  color: var(--laranja-queimado);
+}
+
+.rodape-assinatura .nome-dois {
+  color: var(--marrom-amadeirado);
+}
+
+.rodape-assinatura .chaves {
+  color: var(--verde-musgo);
+  font-weight: bold;
+}
+
+.rodape-contato {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.rodape-contato a {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.rodape-contato a:hover {
+  color: var(--verde-musgo);
+}
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: var(--verde-musgo);
+}
+
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(30%) sepia(8%) saturate(1684%) hue-rotate(170deg) brightness(94%) contrast(85%);
+}
+
+
+
+/* ---------------- */
+.menu-toggle {
+  display: none;
+}
+
+/* Menu normal desktop */
+.topo_menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Os pipes entre links */
+.topo_menu a + a::before {
+  content: "|";
+  margin: 0 0.5rem;
+  color: var(--marrom-amadeirado);
+}
+
+/* Mobile: abaixo de 480px */
+@media (max-width: 480px) {
+  /* Mostrar botão toggle */
+  .menu-toggle {
+    display: inline-block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--marrom-amadeirado);
+    padding: 0.5rem;
+  }
+
+  /* Esconder menu por padrão */
+  .topo_menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  /* Remover pipes no mobile, pois fica vertical */
+  .topo_menu a + a::before {
+    content: none;
+  }
+
+  /* Mostrar menu aberto */
+  .topo_menu.open {
+    display: flex;
+  }
+
+  /* Para o header não sumir atrás do menu */
+  .topo_classe {
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+.menu-text {
+  font-weight: 900;
+  color: var(--verde-musgo);
 }

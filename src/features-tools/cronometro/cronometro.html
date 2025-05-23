@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cozy Tools - cronômetro</title>
+
+  <title>cronômetro - cozy tools</title>
+  <link rel="icon" href="/assets/cronometro.png" type="image/png">
 
   <link rel="stylesheet" href="/styles/reset.css">
   <link rel="stylesheet" href="/styles/global.css">
@@ -23,12 +25,12 @@
     </div>
 
     <nav class="topo_menu" >
-      <a href="index.html">home</a> |
-      <a href="/src/features-tools/timer/timer.html">timer</a> |
-      <a href="./src/features-tools/cronometro/cronometro.html">cronômetro</a> |
-      <a href="./src/features-tools/imc/imc.html">IMC</a> |
-      <a href="./src/features-tools/regra-de-3/regra-de-3.html">regra de 3</a> |
-      <a href="./src/features-tools/pomodoro/pomodoro.html">pomodoro</a>
+      <a href="/src/features-tools/home/index.html">home</a> 
+      <a href="/src/features-tools/timer/timer.html">timer</a> 
+      <a href="/src/features-tools/cronometro/cronometro.html">cronômetro</a> 
+      <a href="/src/features-tools/imc/imc.html">IMC</a> 
+      <a href="/src/features-tools/regra-de-3/regra-de-3.html">regra de 3</a> 
+      <a href="/src/features-tools/pomodoro/pomodoro.html">pomodoro</a>
     </nav>
     
   </header>
@@ -39,7 +41,7 @@
     
     <div class="shape_cronometro">
         <img src="/assets/moldura-timer.png" alt="relógio marrom estilo rádio antigo">
-        <diiv class="tempo_cronometro" id="visor_cronometro">00:00</diiv>
+        <div class="tempo_cronometro" id="visor_cronometro">00:00</div>
     </div>
 
   <div class="botoes" id="divBotoes">
@@ -47,26 +49,32 @@
     <button id="botoes_pausar"> pausar </button>
     <button id="botoes_reiniciar"> reiniciar </button>
   </div>
-
-  <div class="como_usar_cronometro">
-    <p>como usar:</p>
-    <p> - navegue pela tela usando o scroll ou as setas ⬆︎⬇︎.</p>
-    <p> - clique em iniciar para começar a contagem.</p>
-    <p> - clique em pausar para interromper. </p>
-    <p> - clique em reiniciar para começar novamente.</p>
-  </div>
   </main>
 
+  
   <footer class="rodape">
-    <p class="copyright">desenvolvido por:</p>
-    <p>
-      <span class="corEscura">.</span>
-      <span class="corClara">regina_</span>
-      <span class="corEscura">ribeiro</span>
-      <span class="corClara">{}</span>
+    <p class="rodape-creditos">desenvolvido por</p>
+  
+    <p class="rodape-assinatura">
+      <span class="ponto">.</span><span class="nome-um">regina_</span><span class="nome-dois">ribeiro</span><span class="chaves">{}</span>
+    </p>
+  
+    <p class="rodape-contato">
+      quer conversar ou dar um oi?
+      <a 
+        href="https://www.linkedin.com/in/ribeiroregina/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="linkedin-link"
+      >
+        fale comigo aqui :)  
+        <img src="/assets/InBug-White.png" alt="LinkedIn" class="linkedin-icon">
+      </a>
     </p>
   </footer>
+  
 
   <script src="cronometro.js"></script>
+  <script src="/src/utils/menu.js"></script>
 </body>
 </html>
