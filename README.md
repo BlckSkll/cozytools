@@ -33,7 +33,7 @@ Este projeto está em andamento. Novas ferramentas e melhorias de interface est�
 
 ## 📸 Preview (em breve)
 
-(Imagem ou link para GitHub Pages aqui)
+cozytools-regina-ribeiro.vercel.app
 
 ## 👩‍💻 Desenvolvido por
 
